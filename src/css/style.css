@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: hsl(0deg, 100%, 74%);
+  background-image: url(../images/bg-intro-desktop.png);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+body main {
+  display: flex;
+  align-items: center;
+}
+body main section.info-div {
+  width: 35rem;
+}
+body main section.info-div h1 {
+  font-size: 3rem;
+}
+body main section.form-div {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+body main section.form-div div.form-header {
+  text-align: center;
+}
+body main section.form-div div.form-header h2 {
+  background-color: hsl(248deg, 32%, 49%);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: lighter;
+}
+body main section.form-div form#form {
+  background-color: white;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+body main section.form-div form#form div.form-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.9rem 0;
+}
+body main section.form-div form#form div.form-item input {
+  padding: 1rem;
+  padding-left: 2rem;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+  font-weight: bolder;
+}
+body main section.form-div form#form div.form-item input::placeholder {
+  font-weight: bolder;
+}
+body main section.form-div form#form div.form-item input.show-error {
+  display: block;
+  background: url(../images/icon-error.svg) no-repeat;
+  background-position: 95%;
+  border: 2px solid hsl(0deg, 100%, 74%);
+}
+body main section.form-div form#form div.form-item span.show-error {
+  position: absolute;
+  top: 4.5rem;
+  right: 0.2rem;
+  display: block;
+  color: hsl(0deg, 100%, 74%);
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-style: italic;
+}
+body main section.form-div form#form div.form-item .hide-error {
+  display: none;
+}
+body main section.form-div form#form div.form-submit {
+  text-align: center;
+}
+body main section.form-div form#form div.form-submit input {
+  margin: 0.9rem 0 0.6rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px #2ba671;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  background-color: hsl(154deg, 59%, 51%);
+}
+body main section.form-div form#form div.form-submit input:hover {
+  cursor: pointer;
+}
+body main section.form-div form#form div.form-submit input:active {
+  transform: translateY(2px);
+  background-color: #2ba671;
+  box-shadow: none;
+}
+body main section.form-div form#form div.form-submit span {
+  color: hsl(246deg, 25%, 77%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+body main section.form-div form#form div.form-submit span a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: hsl(0deg, 100%, 74%);
+}
+
+/*# sourceMappingURL=style.css.map */

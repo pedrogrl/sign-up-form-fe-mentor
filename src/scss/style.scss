@@ -1,0 +1,152 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// Vars
+$red: hsl(0, 100%, 74%); 
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%); 
+$grayishBlue: hsl(246, 25%, 77%);
+
+// Código
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: $red;
+  background-image: url(../images/bg-intro-desktop.png);
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  main{
+    display: flex;
+    align-items: center;
+
+    section.info-div{
+      // flex: 50%;
+      width: 35rem;
+
+      h1{
+        font-size: 3rem;
+      }
+    }
+
+    section.form-div{
+      // flex: 50%;
+      width: 35rem;
+      display: flex;
+      flex-direction: column;
+      
+      div.form-header{
+        text-align: center;
+
+        h2{
+          background-color: $blue;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 10px;
+          font-weight: lighter;
+        }
+      }
+
+      form#form{
+        background-color: white;
+        padding: 2.5rem;
+        margin-top: 2rem;
+        border-radius: 10px;
+
+        div.form-item{
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          padding: .9rem 0;
+
+          input{
+            padding: 1rem;
+            padding-left: 2rem;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            border-radius: 5px;
+            font-weight: bolder;
+
+            &::placeholder{
+              font-weight: bolder;
+            }
+          }
+          
+          // img{
+          //   position: absolute;
+          //   top: 1.7rem;
+          //   right: 1rem;
+          // }
+          input.show-error{
+            display: block;
+            background: url(../images/icon-error.svg) no-repeat;
+            background-position: 95%;
+            border: 2px solid $red;
+          }
+          span.show-error{
+            position: absolute;
+            top: 4.5rem;
+            right: .2rem;
+            display: block;      
+            color: $red;
+            font-size: .7rem;
+            font-weight: 500;
+            font-style: italic;
+          }
+          .hide-error{
+            display: none;
+          }
+        }
+
+        div.form-submit{
+          text-align: center;
+          input{
+            margin: .9rem 0 .6rem;
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 3px 3px darken($color: $green, $amount: 10);
+
+            font-weight: 500;
+            font-size: 1rem;
+
+            color: white;
+            background-color: $green;
+            &:hover{
+              cursor: pointer;
+            }
+            &:active{
+              transform: translateY(2px);
+              background-color: darken($color: $green, $amount: 10);
+              box-shadow: none;
+            }
+          }
+          span{
+            color: $grayishBlue;
+            font-size: .75rem;
+            font-weight: 500;
+
+            a{
+              text-decoration: none;
+              font-weight: bolder;
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
