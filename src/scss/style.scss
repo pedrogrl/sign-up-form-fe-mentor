@@ -20,7 +20,7 @@ body{
   background-color: $red;
   background-image: url(../images/bg-intro-desktop.png);
 
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,15 +45,17 @@ body{
       display: flex;
       flex-direction: column;
       
+      
       div.form-header{
         text-align: center;
-
+        
         h2{
           background-color: $blue;
           padding: 1rem;
           font-size: 1rem;
           border-radius: 10px;
           font-weight: lighter;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.314);
         }
       }
 
@@ -62,6 +64,7 @@ body{
         padding: 2.5rem;
         margin-top: 2rem;
         border-radius: 10px;
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.244);
 
         div.form-item{
           position: relative;
@@ -150,3 +153,51 @@ body{
   }
 }
 
+@media (max-width:1130px){
+  body{
+    background: url(../images/bg-intro-mobile.png);
+    background-color: $red;
+
+    main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+           
+      section{
+        width: 70% !important;
+        text-align: center;
+      }
+
+      section.info-div{
+        padding: 2rem 0;
+
+        h1{
+          margin-bottom: 1rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:520px){
+  body{
+
+    main {
+           
+      section{
+        width: 90% !important;
+        text-align: center;
+      }
+
+      section.info-div{
+        padding: 4rem 0;
+      }
+
+      form#form{
+        padding: 1rem 1.5rem !important;
+      }
+    }
+  }
+}
